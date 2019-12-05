@@ -18,6 +18,17 @@ form.addEventListener('submit', (e) => {
 
     let scorePercent = score/correctAnswers.length*100;
 
-    scoreDisplay.textContent = `${scorePercent}%`;
+    scrollTo(0, 0);
+
     result.classList.remove('d-none');
+
+    let output = 0;
+    const timer = setInterval(() => {
+        scoreDisplay.textContent = `${output}%`;
+        if(output === scorePercent){
+            clearInterval(timer);
+        } else {
+            output++;
+        }
+    }, 10)
 });
