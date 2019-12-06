@@ -1,0 +1,12 @@
+.title, .q-num, .result-percent, label {
+    color: #643C5F;
+}
+
+.quiz {
+    background-color: #62C122;
+}
+
+.btn {
+    background-color: #755171;
+    color: white;
+}
